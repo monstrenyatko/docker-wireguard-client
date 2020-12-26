@@ -1,7 +1,7 @@
 WireGuard client Docker image
 =============================
 
-[![Build Status](https://travis-ci.org/monstrenyatko/docker-wireguard-client.svg?branch=master)](https://travis-ci.org/monstrenyatko/docker-wireguard-client)
+[![](https://github.com/monstrenyatko/docker-wireguard-client/workflows/ci/badge.svg?branch=master)](https://github.com/monstrenyatko/docker-wireguard-client/actions?query=workflow%3Aci)
 
 About
 =====
