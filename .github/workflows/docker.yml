@@ -1,10 +1,8 @@
-name: ci
+name: docker
 on:
-  schedule:
-    - cron: '0 2 1 * *'
   push:
     branches:
-      - master
+      - main
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -24,5 +22,5 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push
         run: |
-          ./build.sh "$REPO:$(date +%Y%m%d)" "--push"
+          ./build.sh "$REPO:$(date +%Y-%m-%d)" "--push"
           ./build.sh "$REPO:latest" "--push"

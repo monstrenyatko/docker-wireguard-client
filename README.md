@@ -1,7 +1,7 @@
 WireGuard client Docker image
 =============================
 
-[![](https://github.com/monstrenyatko/docker-wireguard-client/workflows/ci/badge.svg?branch=master)](https://github.com/monstrenyatko/docker-wireguard-client/actions?query=workflow%3Aci)
+[![docker](https://github.com/monstrenyatko/docker-wireguard-client/actions/workflows/docker.yml/badge.svg)](https://github.com/monstrenyatko/docker-wireguard-client/actions/workflows/docker.yml)
 
 About
 =====
@@ -94,15 +94,6 @@ Container configures firewall to block all traffic while VPN network is disconne
 Build own image
 ===============
 
-* `default` target platform:
-
-  ```sh
-    cd <path to sources>
-    DOCKER_BUILDKIT=1 docker build --tag <tag name> .
-  ```
-* `arm/v6` target platform:
-
-  ```sh
-    cd <path to sources>
-    DOCKER_BUILDKIT=1 docker build --platform=linux/arm/v6 --tag <tag name> .
-  ```
+```sh
+./build.sh <tag name>
+```
