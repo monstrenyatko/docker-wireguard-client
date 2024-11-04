@@ -1,4 +1,4 @@
-FROM monstrenyatko/alpine:2024-10-01
+FROM monstrenyatko/alpine:2024-11-01
 
 LABEL maintainer="Oleg Kovalenko <monstrenyatko@gmail.com>"
 
