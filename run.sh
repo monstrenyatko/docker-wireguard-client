@@ -19,6 +19,11 @@ if [ "$1" = $APP_NAME ]; then
   /app/firewall6.sh
   /app/routing.sh
   /app/routing6.sh
+
+  # Force resolvconf to take ownership of the file and write its signature
+  resolvconf -m 0 -a dev.null </etc/resolv.conf 2>/dev/null || true
+  resolvconf -u 2>/dev/null || true
+
   wg-quick up wg0
   trap _term SIGTERM
   wg show

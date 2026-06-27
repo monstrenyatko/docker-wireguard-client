@@ -3,7 +3,7 @@ FROM monstrenyatko/alpine:2026-06-15
 LABEL maintainer="Oleg Kovalenko <monstrenyatko@gmail.com>"
 
 RUN apk update && \
-    apk add iptables ip6tables wireguard-tools && \
+    apk add iptables ip6tables openresolv wireguard-tools && \
     # clean-up
     rm -rf /root/.cache && mkdir -p /root/.cache && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
